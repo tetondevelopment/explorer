@@ -33,11 +33,7 @@ export default {
     },
 
     getTotal () {
-      if (this.height < this.rewardOffset) {
-        this.forged = 0
-      } else {
-        this.forged = (this.height - this.rewardOffset) * 2 * 1e8
-      }
+      this.forged = 0
     }
   }
 }
