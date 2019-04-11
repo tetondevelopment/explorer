@@ -1,13 +1,7 @@
-# Ark Explorer 3.0
-
-<p align="center">
-    <img src="/ARKExplorer.png" />
-</p>
+# Teton Explorer 3.0
 
 > Designed and developed from the ground-up, using lean & fast developmental frameworks (Tailwind CSS & Vue.JS).
 
-[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/explorer)](https://circleci.com/gh/ArkEcosystem/explorer)
-[![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/explorer)](https://codecov.io/gh/arkecosystem/explorer)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
 You can access it at [https://explorer.ark.io/](https://explorer.ark.io/).
@@ -17,7 +11,7 @@ You can access it at [https://explorer.ark.io/](https://explorer.ark.io/).
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ArkEcosystem/explorer
+git clone https://github.com/tetondevelopment/explorer
 ```
 
 ### 2. Install Dependencies
