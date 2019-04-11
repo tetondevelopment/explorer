@@ -4,7 +4,7 @@
 
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-You can access it at [https://explorer.ark.io/](https://explorer.ark.io/).
+You can access it at [https://explorer.tetonsavings.com/](https://explorer.tetonsavings.com/).
 
 ## Build Setup
 
