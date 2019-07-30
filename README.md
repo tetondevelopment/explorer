@@ -4,7 +4,7 @@
 
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-You can access it at [https://explorer.tetonsavings.com/](https://explorer.tetonsavings.com/).
+You can access it at [https://explorer.tetonconcierge.net/](https://explorer.tetonconcierge.net/).
 
 ## Build Setup
 
@@ -104,10 +104,6 @@ yarn dev --env.routerMode=history
 $ yarn test
 ```
 
-## Security
-
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
-
 ## Contributing
 
 * If you find any bugs, submit an [issue](../../issues) or open a [pull-request](../../pulls), helping us catch and fix them.
@@ -115,13 +111,14 @@ If you discover a security vulnerability within this package, please send an e-m
 * Join our [gitter](https://gitter.im/ark-developers/Lobby).
 * [Contribute bounties](https://github.com/ArkEcosystem/bounty-program).
 
+## Security
+
+If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+
 ## Credits
 
-- [Brian Faust](https://github.com/faustbrian)
-- [Lúcio Rubens](https://github.com/luciorubeens)
-- [Alex Barnsley](https://github.com/alexbarnsley)
-- [All Contributors](../../contributors)
+This project exists thanks to all the people who [contribute](../../contributors).
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)

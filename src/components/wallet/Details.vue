@@ -4,7 +4,7 @@
     <div class="py-8 bg-theme-feature-background hidden md:flex xl:rounded-lg items-center">
       <button
         class="address-button ml-10 mr-6 p-3 rounded flex-none hover-button-shadow transition"
-        @click="showModal = !showModal"
+        @click="toggleModal()"
       >
         <img
           class="block"
@@ -91,11 +91,10 @@
         <div class="text-grey mb-2">
           {{ $t("Balance (token)", { token: networkToken() }) }}
         </div>
-        <div
-          v-tooltip="readableCurrency(wallet.balance)"
-          class="text-lg text-white semibold"
-        >
-          {{ readableCrypto(wallet.balance, false) }}
+        <div class="text-lg text-white semibold">
+          <span v-tooltip="readableCurrency(wallet.balance)">
+            {{ readableCrypto(wallet.balance, false) }}
+          </span>
         </div>
       </div>
 
@@ -175,8 +174,8 @@
       <div class="px-2">
         <div class="flex -mx-6 mb-8">
           <div
-            class="md:w-1/2 px-6 w-full border-grey-dark"
             :class="{ 'border-r': wallet.publicKey }"
+            class="md:w-1/2 px-6 w-full border-grey-dark"
           >
             <div class="flex items-center text-grey mb-2">
               <span class="mr-2">{{ $t("Address") }}</span>
@@ -229,15 +228,18 @@
         </div>
         <div class="flex -mx-6">
           <div
-            class="md:w-1/2 px-6 w-full"
             :class="{ 'border-r border-grey-dark' : isVoting }"
+            class="md:w-1/2 px-6 w-full"
           >
             <div class="text-grey mb-2">
               {{ $t("Balance (token)", { token: networkToken() }) }}
             </div>
             <div class="text-white">
               <span
-                v-tooltip="{ trigger: 'hover click', content: `${readableCurrency(wallet.balance)}` }"
+                v-tooltip="{
+                  trigger: 'hover click',
+                  content: readableCurrency(wallet.balance)
+                }"
               >
                 {{ readableCrypto(wallet.balance, false) }}
               </span>
@@ -266,14 +268,14 @@
     <!-- Modal -->
     <Modal
       v-if="showModal"
-      @close="showModal = false"
+      @close="toggleModal()"
     >
       <div class="text-center px-10 py-2">
         <p class="semibold text-3xl mb-4">
           {{ $t("QR Code") }}
         </p>
         <p class="mb-10">
-          {{ $t("Scan for Address") }}
+          {{ $t("Scan for address") }}
         </p>
         <QrCode
           :value="wallet.address"
@@ -310,7 +312,7 @@ export default {
     },
 
     isDelegate () {
-      return this.isDelegateByAddress(this.wallet.address)
+      return this.wallet.isDelegate
     },
 
     votedDelegate () {
@@ -325,6 +327,10 @@ export default {
   methods: {
     setView (view) {
       this.view = view
+    },
+
+    toggleModal () {
+      this.showModal = !this.showModal
     }
   }
 }

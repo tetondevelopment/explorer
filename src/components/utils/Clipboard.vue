@@ -6,8 +6,8 @@
   >
     <img
       ref="copyImage"
-      class="block"
       :class="{ 'animated wobble': copying }"
+      class="block"
       src="@/assets/images/icons/copy.svg"
     >
   </button>
@@ -54,7 +54,7 @@ export default {
     },
 
     copy () {
-      let textArea = document.createElement('textarea')
+      const textArea = document.createElement('textarea')
       textArea.value = this.value
       textArea.style.cssText =
         'position:absolute;top:0;left:0;z-index:-9999;opacity:0;'
