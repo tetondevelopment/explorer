@@ -1,6 +1,6 @@
 {
   "title": "Teton Explorer",
-  "server": "https://api.tetonsavings.com/api",
+  "server": "https://api.tetonconcierge.net/api",
   "alias": "Main",
   "activeDelegates": 5,
   "rewardOffset": 0,
