@@ -1,6 +1,6 @@
 {
   "title": "Teton Explorer",
-  "server": "https://api.tetonsavings.com/api/v2",
+  "server": "https://api.tetonsavings.com/api",
   "alias": "Main",
   "activeDelegates": 5,
   "rewardOffset": 0,
@@ -12,6 +12,10 @@
     "token": "TETON",
     "symbol": "TET",
     "currency": null,
-    "priceChart": false
+    "priceChartOptions": {
+      "enabled": false,
+      "period": "day",
+      "type": "price"
+    }
   }
 }
